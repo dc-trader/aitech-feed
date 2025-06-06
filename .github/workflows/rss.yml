@@ -3,7 +3,7 @@ name: Fetch RSS & commit
 on:
   workflow_dispatch:           # 手動実行も許可
   schedule:
-    - cron: '*/30 * * * *'     # 30分ごと（UTC）
+    - cron: '0 23 * * *'     # 30分ごと（UTC）
 
 jobs:
   fetch:

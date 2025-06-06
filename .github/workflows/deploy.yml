@@ -11,7 +11,8 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 20 }
       - run: npm ci
-      - run: npm run build          # Astro/Next.js のビルド
+      - run: npm run build # Astro/Next.js のビルド
+      - run: touch dist/.nojekyll # ★ 追加：Jekyll を無効化
       - uses: actions/upload-pages-artifact@v3
-        with: { path: ./dist }      # ←ビルド成果物のパス
+        with: { path: ./dist } # ←ビルド成果物のパス
       - uses: actions/deploy-pages@v4

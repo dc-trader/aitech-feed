@@ -1,15 +1,15 @@
 name: Fetch RSS & commit
 
 on:
-  workflow_dispatch:           # 手動実行も許可
+  workflow_dispatch: # 手動実行も許可
   schedule:
-    - cron: '0 23 * * *'     # 30分ごと（UTC）
+    - cron: "0 23 * * *"
 
 jobs:
   fetch:
     runs-on: ubuntu-latest
     env:
-      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}   # 要約したい場合
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }} # 要約したい場合
     steps:
       - uses: actions/checkout@v4
 

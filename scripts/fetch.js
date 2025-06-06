@@ -10,7 +10,7 @@ const feeds = [
 
 const keywords = ['AI', 'LLM', 'React', 'Astro'];   // 興味ワード
 const parser = new Parser();
-const openai = new OpenAIApi(new Configuration({ apiKey: process.env.OPENAI_API_KEY }));
+// const openai = new OpenAIApi(new Configuration({ apiKey: process.env.OPENAI_API_KEY }));
 
 async function summarize(text) {
   const res = await openai.chat.completions.create({
@@ -33,7 +33,8 @@ async function main() {
       const body = (item.title || '') + (item.contentSnippet || '');
       if (!keywords.some(k => body.includes(k))) continue;   // キーワードフィルタ
 
-      const summary = await summarize(item.contentSnippet ?? item.content ?? '');
+    //   const summary = await summarize(item.contentSnippet ?? item.content ?? '');
+      const summary = "aaaaa";
       articles.push({
         source : feed.source,
         title  : item.title,

@@ -3,8 +3,8 @@ import fs from 'fs/promises';
 // import { Configuration, OpenAIApi } from 'openai';   // ← 要約が不要なら消す
 
 const feeds = [
-  { source: 'zenn',  url: 'https://zenn.dev/<ユーザ名>/feed' },
-  { source: 'qiita', url: 'https://qiita.com/<ユーザ名>/feed' },
+  { source: 'zenn',  url: 'https://zenn.dev/dc/feed' },
+//   { source: 'qiita', url: 'https://qiita.com/<ユーザ名>/feed' },
 //   { source: 'note',  url: 'https://note.com/<ユーザ名>/rss' } // プロフ右上のRSSアイコンで取得可
 ];
 
